@@ -1,0 +1,34 @@
+<header id="header" [ngClass]="isMenuOpen ? 'menuOpen orange' : 'blue'">
+  <div class="g__row menu">
+    <!-- logo -->
+    <div class="menu__logo">
+      <a href=""><img width="416" height="80" src="../assets/img/logo_wt{{isMenuOpen ? '_white' : ''}}.png"></a>
+    </div>
+    <!-- nav -->
+    <nav id="nav" class="menu__nav" [ngClass]="isMenuOpen ? 'menuOpen' : ''">
+
+      <div id="menu__btn" class="menu__btn" [ngClass]="isMenuOpen ? 'open' : ''" (click)="clickMenu()">
+        <span class="menu__btn--burger"></span>
+      </div>
+
+      <ul class="menu__nav--list">
+        <li class="menu__nav--item">
+          <a routerLink="/home/" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="menu__nav--item">
+          <a routerLink="/how/">¿Que es?</a>
+        </li>
+        <li class="menu__nav--item">
+          <a routerLink="/how/">¿Por qué?</a>
+        </li>
+        <li class="menu__nav--item">
+          <a routerLink="/how/">¿Cómo ayuda a las marcas?</a>
+        </li>
+        <li class="menu__nav--item">
+          <a routerLink="/how/">¿Cómo se usa?</a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>

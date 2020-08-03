@@ -1,0 +1,96 @@
+// Grid Component
+.grid-section {
+  >div {
+    display: flex;
+    width: 100%;
+
+    &.columns-2>div {
+      flex-basis: 50%;
+      flex-direction: column;
+    }
+
+    &.columns-3>div {
+      flex-basis: 33.33%;
+      flex-direction: column;
+    }
+
+    &.columns-4>div {
+      flex-basis: 25%;
+      flex-direction: column;
+    }
+
+    .card {
+      display: flex;
+      width: 100%;
+      padding: 0 0 1rem 1.5rem;
+
+      .card-copy {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .text {
+        height: 100%;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      h3 {
+        min-height: 45px;
+      }
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include tablet() {
+    &.spacing-text:last-child {
+      padding: $column 0 $column !important;
+    }
+
+    >div {
+
+      &.columns-2,
+      &.columns-3,
+      &.columns-4 {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100%;
+
+        .card {
+          min-width: 45%;
+          padding: 0 0 1rem;
+        }
+      }
+
+      &.columns-2>div {
+        flex-basis: 45%;
+      }
+    }
+  }
+
+  @include mobile() {
+    >div {
+
+      &.columns-2,
+      &.columns-3,
+      &.columns-4 {
+        flex-direction: column;
+
+        .card {
+          padding: 0 0 1rem;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

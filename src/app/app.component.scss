@@ -1,0 +1,287 @@
+@mixin --mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin --tablet {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin --desktop {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+@mixin --desktop-big {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+$--black: #000;
+$--orange: #EC4E20;
+$--red: rgb(218, 108, 121);
+$--blue-dark: #410199;
+$--blue: #063BAF;
+$--blue-blue: #0D4BE3;
+$--white: #fff;
+
+header.fixed {
+  width: 100%;
+  position: fixed;
+  background: 0 0;
+  transition: .4s;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+header.orange {
+  background: $--orange
+}
+
+header.blue {
+  background: $--blue
+}
+
+header .g__row:nth-child(1) {
+  padding: 10px 0px;
+}
+
+/* menu */
+.menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 60px;
+  vertical-align: middle;
+  position: relative;
+
+  &__logo {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 40px
+  }
+
+  &__logo a {
+    display: none;
+  }
+
+  &__logo img,
+  &__logo a {
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: 20px
+  }
+
+  &__logo a.blue {
+    display: none
+  }
+
+  &__logo a.blue.show {
+    display: block
+  }
+
+  &__logo a {
+    display: block
+  }
+
+  &__nav {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: calc(100% - 266px);
+    height: 70px;
+    vertical-align: middle;
+    position: relative;
+
+    @include --tablet {
+      width: calc(100% - 238px);
+    }
+
+    &--item {
+      display: block;
+      padding: 20px 30px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+    }
+
+    &--item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 9px);
+      width: 16px;
+      height: 1px;
+    }
+
+    &--item:nth-last-child(1)::after {
+      height: 0
+    }
+
+    &--item a {
+      cursor: pointer;
+    }
+
+    &--list {
+      background: 0 0;
+      transition: .4s;
+      padding: 20px 0;
+      position: fixed;
+      top: 60px;
+      right: 0;
+      opacity: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      overflow-y: hidden;
+      overflow-y: auto;
+    }
+  }
+}
+
+.orange .menu,
+.blue .menu {
+  &__nav {
+    &--item a {
+      color: $--white;
+      font-size: 2em;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    &--item::after {
+      background: $--white
+    }
+
+    &--item a:hover {
+      color: $--blue;
+      transition: .4s;
+    }
+
+    &--list {
+      background: $--orange;
+    }
+  }
+}
+
+.menuOpen .menu {
+  &__nav {
+    &--list {
+      opacity: 1;
+      top: 70px;
+      right: 0;
+      box-shadow: 0 30px 30px rgba(0, 0, 0, .1)
+    }
+  }
+}
+
+/* menubtn-hamburguer */
+.menu__btn {
+  width: 50px;
+  height: 70px;
+  position: relative;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  margin-right: 20px;
+
+  &--burger {
+    position: absolute;
+    top: 34px;
+    left: 12px;
+  }
+
+  &--burger,
+  &--burger::before,
+  &--burger::after {
+    height: 3px;
+    width: 26px;
+    transition: .4s ease;
+  }
+}
+
+.blue .menu__btn {
+
+  &--burger,
+  &--burger::before,
+  &--burger::after {
+    background-color: $--white;
+  }
+}
+
+.orange .menu__btn {
+
+  &--burger,
+  &--burger::before,
+  &--burger::after {
+    background-color: $--white;
+  }
+}
+
+.menu__btn {
+
+  &--burger::before,
+  &--burger::after {
+    content: "";
+    position: absolute;
+  }
+}
+
+.menu__btn {
+  &--burger::before {
+    top: 6px;
+    bottom: auto;
+    transform: translateY(-16px);
+  }
+}
+
+.menu__btn {
+  &--burger::after {
+    top: auto;
+    bottom: 6px;
+    transform: translateY(16px);
+  }
+}
+
+.menu__btn.open .menu__btn {
+  &--burger {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.menu__btn.open .menu__btn {
+  &--burger::before {
+    top: 1px;
+    bottom: auto;
+    transform: rotate(45deg);
+  }
+}
+
+.menu__btn.open .menu__btn {
+  &--burger::after {
+    top: auto;
+    bottom: -1px;
+    transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'wtGothic';
+  src: url('/assets/fonts/WTGothic-Regular.woff2') format('woff2'),
+    url('/assets/fonts/WTGothic-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Italic vresion of the normal font. Do not use the custom WTGothic-RegularItalic name here
+// so we don't have to spell it out everywhere.
+@font-face {
+  font-family: 'wtGothic';
+  src: url('/assets/fonts/WTGothic-RegularItalic.woff2') format('woff2'),
+    url('/assets/fonts/WTGothic-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'wtGothic-medium';
+  src: url('/assets/fonts/WTGothic-Medium.woff2') format('woff2'),
+    url('/assets/fonts/WTGothic-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'wtGothic-bold';
+  src: url('/assets/fonts/WTGothic-Bold.woff2') format('woff2'),
+    url('/assets/fonts/WTGothic-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Italic version of the bold font. Use the 'wtGothic-bold' name so we don't have to have special
+// classes for .
+@font-face {
+  font-family: 'wtGothic-bold';
+  src: url('/assets/fonts/WTGothic-BoldItalic.woff2') format('woff2'),
+    url('/assets/fonts/WTGothic-BoldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+html {
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  width: 100%;
+  display: block;
+  position: relative;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  list-style: none;
+  font-style: unset;
+  outline-style: none;
+  font-family: Gotham, sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  line-height: 1.1;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+div {
+  position: relative;
+  z-index: 1
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  display: block;
+  font-family: 'wtGothic-medium';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'wtGothic-bold';
+}
+
+li>a {
+  font-family: 'wtGothic-bold';
+}
+
+p {
+  font-family: 'wtGothic';
+}
