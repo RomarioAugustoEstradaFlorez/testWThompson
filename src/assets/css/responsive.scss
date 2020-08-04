@@ -1,3 +1,9 @@
+@mixin --mobile-sm {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
 @mixin --mobile {
   @media (max-width: 600px) {
     @content;

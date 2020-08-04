@@ -1,5 +1,7 @@
+@import '../../assets/css/responsive';
 @import '../../assets/css/colors';
 
+// reframing
 .sec-reframing {
   background: $--blue-light;
   text-align: center;
@@ -10,6 +12,10 @@
     padding-top: 150px;
     font-size: 3em;
     margin-bottom: 30px;
+
+    @include --tablet {
+      font-size: 2em;
+    }
   }
 
   &--desc {
@@ -18,7 +24,7 @@
   }
 
   &__btn {
-    background-color: #ec5020;
+    background-color: $--orange;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -26,16 +32,10 @@
     font-size: 17px;
     padding: 10px 30px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #fa7e5c;
   }
 
   &__btn:hover {
     background-color: #f08b6c;
-  }
-
-  &__btn:active {
-    position: relative;
-    top: 1px;
   }
 }
 
@@ -65,4 +65,89 @@
   display: inline-block;
   vertical-align: middle;
   position: relative;
+}
+
+// sec what is
+
+.sec-what {
+  background: $--blue-light;
+  color: $--white;
+  height: 100vh;
+
+  &__info {
+    position: absolute;
+    right: -60px;
+    top: 20px;
+
+    @include --tablet {
+      right: -40px;
+    }
+
+    @include --mobile {
+      position: inherit;
+      right: 0px;
+    }
+
+    &--title {
+      padding-top: 50px;
+      font-size: 3em;
+      margin-bottom: 30px;
+
+      @include --tablet {
+        padding-top: 10px;
+        font-size: 2em;
+      }
+    }
+
+    &--desc {
+      font-size: 1em;
+      margin-bottom: 40px;
+    }
+
+    &--btn {
+      text-decoration: underline;
+      color: $--white;
+      line-height: 2px;
+      font-size: 12px;
+    }
+  }
+
+  &__box {
+    background: $--blue-dark;
+    height: 25em;
+
+    @include --desktop {
+      padding: 80px 70px 60px 70px;
+    }
+
+    @include --tablet {
+      height: 15em;
+      padding: 52px 26px 20px 32px;
+    }
+
+    @include --mobile {
+      height: 55vh;
+      padding: 16px 35px 20px 50px;
+    }
+
+    @include --mobile-sm {
+      padding: 16px 0px 20px 10px;
+    }
+
+
+  }
+
+}
+
+.sec-what .g__col:nth-child(2) {
+  z-index: -1;
+}
+
+.sec-what__box .g__col:nth-child(2) {
+  padding-left: 10px;
+
+  @include --mobile {
+    padding-top: 20px;
+    padding-left: 0px;
+  }
 }

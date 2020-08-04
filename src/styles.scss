@@ -38,7 +38,8 @@ a {
   background-color: transparent;
   text-decoration: none;
   display: block;
-  font-family: 'wtGothic-medium';
+  font-family: 'wtGothic-bold';
+  cursor: pointer;
 }
 
 h1,
@@ -56,4 +57,15 @@ li>a {
 
 p {
   font-family: 'wtGothic';
+}
+
+.img {
+  vertical-align: middle;
+  border: 0;
+
+  &-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
