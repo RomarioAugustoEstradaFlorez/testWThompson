@@ -1,34 +1,4 @@
-@mixin --mobile {
-  @media (max-width: 600px) {
-    @content;
-  }
-}
-
-@mixin --tablet {
-  @media (max-width: 992px) {
-    @content;
-  }
-}
-
-@mixin --desktop {
-  @media (min-width: 993px) {
-    @content;
-  }
-}
-
-@mixin --desktop-big {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-
-$--black: #000;
-$--orange: #EC4E20;
-$--red: rgb(218, 108, 121);
-$--blue-dark: #410199;
-$--blue: #063BAF;
-$--blue-blue: #0D4BE3;
-$--white: #fff;
+@import '../../../assets/css/variables';
 
 header.fixed {
   width: 100%;
@@ -146,7 +116,7 @@ header .g__row:nth-child(1) {
       transition: .4s;
       padding: 20px 0;
       position: fixed;
-      top: 80px;
+      top: -800px;
       right: 0;
       opacity: 0;
       z-index: -1;
@@ -216,8 +186,8 @@ header .g__row:nth-child(1) {
 
   &--burger {
     position: absolute;
-    top: 34px;
-    left: 12px;
+    top: 36px;
+    left: 10px;
   }
 
   &--burger,
@@ -281,16 +251,34 @@ header .g__row:nth-child(1) {
 
 .menu__btn.open .menu__btn {
   &--burger::before {
-    top: 1px;
-    bottom: auto;
+    // top: 1px;// bottom: auto;
     transform: rotate(45deg);
+    // transform: rotate(-45deg);
+    left: 14%;
+    top: 46%;
+    position: absolute;
   }
 }
 
 .menu__btn.open .menu__btn {
   &--burger::after {
-    top: auto;
-    bottom: -1px;
+    // top: auto;
+    // bottom: -1px;
+    // transform: rotate(-45deg);
     transform: rotate(-45deg);
+    left: 14%;
+    top: 46%;
+    position: absolute;
   }
+}
+
+.menu__btn.open i {
+  position: absolute;
+  top: 18px;
+  left: 3px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  border: 1px solid $--white;
 }
