@@ -1,0 +1,68 @@
+@import '../../assets/css/colors';
+
+.sec-reframing {
+  background: $--blue-light;
+  text-align: center;
+  color: $--white;
+  height: 100vh;
+
+  &--title {
+    padding-top: 150px;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
+  &--desc {
+    font-size: 1em;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    background-color: #ec5020;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #fa7e5c;
+  }
+
+  &__btn:hover {
+    background-color: #f08b6c;
+  }
+
+  &__btn:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+.explore {
+  margin-top: 80px;
+  position: relative;
+  text-align: center;
+
+  &--text {
+    font-size: 12px;
+    color: $--white;
+    padding-bottom: 0px;
+  }
+
+  &__icons {
+    position: relative;
+    top: -25px;
+  }
+}
+
+.explore .icon-line {
+  height: 111px;
+  width: 1px;
+  background: white;
+  top: 86px;
+  left: -17px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}

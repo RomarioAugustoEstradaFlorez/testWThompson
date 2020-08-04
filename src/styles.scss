@@ -1,3 +1,4 @@
+@import 'assets/css/grid';
 @import 'assets/css/fonts';
 @import 'assets/css/uikit';
 
@@ -55,49 +56,4 @@ li>a {
 
 p {
   font-family: 'wtGothic';
-}
-
-.icono-caretDownCircle {
-  border: 2px solid;
-  width: 12px;
-  height: 20px;
-  margin: 7px 11px;
-  border: 2px solid;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  font-style: normal;
-  color: currentColor;
-  text-align: left;
-  text-indent: -9999px;
-  direction: ltr;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg)
-}
-
-.icono-caretDownCircle::after,
-.icono-caretDownCircle::before {
-  width: 11px;
-  height: 2px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  right: 7px;
-  box-shadow: inset 0 0 0 32px;
-  -webkit-transform-origin: right;
-  transform-origin: right;
-
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg)
-}
-
-.icono-caretDownCircle::before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg)
-}
-
-.icono-caretDownCircle::after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg)
 }

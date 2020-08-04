@@ -1,7 +1,7 @@
 // icons
 
 /* Caret Down  */
-[class*=icono-] {
+[class*=icon-] {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -12,27 +12,122 @@
   direction: ltr
 }
 
-[class*=icono-]:after,
-[class*=icono-]:before {
+[class*=icon-]:after,
+[class*=icon-]:before {
   content: '';
   pointer-events: none
 }
 
-[class*=icono-][class*=Circle] {
+[class*=icon-][class*=Circle] {
   border-radius: 50%;
   width: 30px;
   height: 30px;
   margin: 2px;
 }
 
-[class*=icono-][class*=Square] {
+[class*=icon-][class*=Light] {
+  border: 1px solid;
+}
+
+[class*=icon-][class*=Square] {
   border-radius: 4px;
   width: 30px;
   height: 30px;
   margin: 2px
 }
 
-[class*=icono-],
-[class*=icono-] * {
+[class*=icon-],
+[class*=icon-] * {
   box-sizing: border-box
+}
+
+.icon-caretDownCircle {
+  border: 2px solid;
+  width: 12px;
+  height: 20px;
+  margin: 7px 11px;
+  border: 2px solid;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-style: normal;
+  color: currentColor;
+  text-align: left;
+  text-indent: -9999px;
+  direction: ltr;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.icon-caretDownCircle::after,
+.icon-caretDownCircle::before {
+  width: 11px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 7px;
+  box-shadow: inset 0 0 0 32px;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.icon-caretDownCircle::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.icon-caretDownCircle::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+// caretLight
+.icon-caretDownCircleLight {
+  border: 2px solid;
+  width: 12px;
+  height: 20px;
+  margin: 7px 11px;
+  border: 2px solid;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-style: normal;
+  color: currentColor;
+  text-align: left;
+  text-indent: -9999px;
+  direction: ltr;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.icon-caretDownCircleLight::after,
+.icon-caretDownCircleLight::before {
+  width: 11px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 8px;
+  box-shadow: inset 0 0 0 32px;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.icon-caretDownCircleLight::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.icon-caretDownCircleLight::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg)
 }
