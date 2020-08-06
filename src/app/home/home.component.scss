@@ -278,3 +278,148 @@
     width: 100%;
   }
 }
+
+.sec-help .explore .icon-line {
+  width: 1.1px;
+  height: 190px;
+  background: white;
+  top: -130px;
+  left: 0px;
+
+  @include --mobile {
+    top: 0px;
+  }
+}
+
+/* how */
+.sec-how {
+  background: $--blue-light;
+  color: $--white;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  @include --mobile {
+    padding: 80px;
+  }
+
+  &--title {
+    padding-top: 10px;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include --mobile {
+      font-size: 2em;
+    }
+  }
+
+  &__logo {
+
+    &.img-responsive {
+      @include --mobile {
+        margin: 0 auto;
+      }
+    }
+
+    &--title {
+      padding-top: 10px;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    &--label {
+      font-size: 1em;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    margin-top: 60px;
+
+    &--text {
+      font-size: 1em;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &--btn {
+      background-color: $--orange;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 17px;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+
+    &--btn:hover {
+      background-color: #f08b6c;
+    }
+  }
+}
+
+.sec-how__logo img {
+  margin: 0 auto;
+  width: 70%;
+
+  @include --mobile {
+    width: 100%;
+  }
+}
+
+.sec-how .explore .icon-line {
+  width: 1.1px;
+  height: 190px;
+  background: white;
+  top: 0px;
+  left: 0px;
+}
+
+/* contact */
+
+.sec-contact {
+  background: $--blue-light;
+  color: $--white;
+  padding-bottom: 80px;
+  text-align: center;
+
+  &--title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+
+    &--text {
+      font-size: 1em;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &--btn {
+      background-color: $--orange;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 17px;
+      padding: 10px 30px;
+      text-decoration: none;
+
+      @include --tablet {
+        font-size: 15px;
+      }
+    }
+
+    &--btn:hover {
+      background-color: #f08b6c;
+    }
+  }
+}

@@ -13,19 +13,22 @@
 
       <ul class="menu__nav--list">
         <li class="menu__nav--item">
-          <a routerLink="/home/" routerLinkActive="active">Dashboard</a>
+          <a routerLink="/home/" (click)="isMenuOpen=false;">Dashboard</a>
         </li>
         <li class="menu__nav--item">
-          <a routerLink="/how/">¿Que es?</a>
+          <a routerLink="/" (click)="isMenuOpen=false;">¿Que es?</a>
         </li>
         <li class="menu__nav--item">
-          <a routerLink="/how/">¿Por qué?</a>
+          <a routerLink="/" (click)="isMenuOpen=false;">¿Por qué?</a>
         </li>
         <li class="menu__nav--item">
-          <a routerLink="/how/">¿Cómo ayuda a las marcas?</a>
+          <a routerLink="/" (click)="isMenuOpen=false;">¿Cómo ayuda a las marcas?</a>
         </li>
         <li class="menu__nav--item">
-          <a routerLink="/how/">¿Cómo se usa?</a>
+          <a routerLink="/" (click)="isMenuOpen=false;">¿Cómo se usa?</a>
+        </li>
+        <li class="menu__nav--item">
+          <a routerLink="/team" (click)="isMenuOpen=false;">Nuestro Equipo</a>
         </li>
 
       </ul>

@@ -1,0 +1,18 @@
+<div class="sec-team">
+    <div class="sec-team--wrapper">
+        <div class="sec-team--head">
+            <h1>Conoce el equipo</h1>
+        </div>
+        <div class="sec-team--cubes">
+            <div *ngFor="let employe of team; let i = index;" class="sec-team--cube"
+                style="background-image: url('{{employe.avatar}}');">
+                <div class="sec-team--cube-name">
+                    <h1>{{employe.first_name}} {{employe.last_name}}</h1>
+                    <p>{{employe.email}}</p>
+                </div>
+                <div class="sec-team--cube-innerBorder"></div>
+                <div class="sec-team--cube-darken"></div>
+            </div>
+        </div>
+    </div>
+</div>

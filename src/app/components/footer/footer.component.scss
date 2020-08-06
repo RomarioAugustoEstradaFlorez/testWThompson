@@ -1,0 +1,24 @@
+@import '../../../assets/css/colors';
+
+.sec-footer {
+  height: 150px;
+  width: 100%;
+  background: $--blue;
+
+  color: #fff;
+
+  &--text {
+    text-align: center;
+  }
+
+  &--text h1 {
+    font-size: 1em;
+    padding-top: 60px;
+  }
+
+  &--text p {
+    font-size: .7em;
+    padding-top: 10px;
+  }
+
+}

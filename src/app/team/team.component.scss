@@ -1,0 +1,83 @@
+@import '../../assets/css/responsive';
+@import '../../assets/css/colors';
+
+.sec-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $--orange;
+  color: $--white;
+  padding: 150px 0px;
+
+  &--wrapper {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &--cubes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &--head {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      font-weight: 400;
+      position: relative;
+    }
+  }
+
+  &--cube {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 2px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    &-name {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      text-shadow: 0 1px 3px #000;
+      z-index: 3;
+
+      h1 {
+        font-size: 16px;
+        color: #fff;
+        margin: 0;
+        user-select: none;
+      }
+
+      p {
+        color: #fff;
+        margin: 0;
+        font-size: 14px;
+        user-select: none;
+      }
+    }
+
+    &:last-child,
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+}
+
+.sec-team--cube:hover {
+  cursor: pointer;
+  border: 5px solid $--blue-light;
+  transition: .3s;
+}
