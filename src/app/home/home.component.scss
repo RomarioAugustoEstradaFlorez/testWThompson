@@ -1,12 +1,78 @@
 @import '../../assets/css/responsive';
 @import '../../assets/css/colors';
 
+
+// generic
+.plus {
+  &-right {
+    position: absolute;
+    bottom: -160px;
+    right: 15%;
+
+    @include --tablet {
+      right: 5%;
+    }
+
+    @include --mobile {
+      right: -28%;
+    }
+
+    &-top {
+      top: -15vw;
+      bottom: inherit;
+      z-index: 7;
+
+      @include --tablet {
+        right: -15%;
+      }
+    }
+  }
+
+  &-left {
+    position: absolute;
+    bottom: -160px;
+    left: 15%;
+
+    @include --tablet {
+      left: 5%;
+    }
+
+    @include --mobile {
+      left: -28%;
+    }
+
+    &-top {
+      top: -15vw;
+      bottom: inherit;
+      z-index: 7;
+
+      @include --tablet {
+        left: -15%;
+      }
+    }
+  }
+
+
+  &-img {
+    transform: scale(0.5);
+  }
+}
+
 // reframing
 .sec-reframing {
-  background: $--blue-light;
+  // background: $--blue-light;
   text-align: center;
   color: $--white;
   height: 100vh;
+  z-index: 4;
+
+
+  &--bg {
+    position: absolute;
+    top: -37vw;
+    right: -16vw;
+    margin-left: 8vw;
+  }
 
   &--title {
     padding-top: 150px;
@@ -70,9 +136,10 @@
 // sec what
 
 .sec-what {
-  background: $--blue-light;
+  // background: $--blue-light;
   color: $--white;
   height: 100vh;
+  z-index: 5;
 
   &__info {
     position: absolute;
@@ -156,9 +223,10 @@
 
 .sec-why {
   padding-top: 200px;
-  background: $--blue-light;
+  // background: $--blue-light;
   color: $--white;
   padding-bottom: 100px;
+  z-index: 3;
 
   &--img-desktop {
     @include --mobile {
@@ -220,12 +288,30 @@
   }
 }
 
+.sec-why .plus {
+  &-right {
+    @include --tablet {
+      bottom: -28%;
+      right: 5%;
+
+      transform: scale(.6);
+    }
+
+    @include --mobile {
+      bottom: -18%;
+      right: -22%;
+
+      transform: scale(1);
+    }
+  }
+}
+
 /*help*/
 .sec-help {
   background: $--orange;
   color: $--white;
   padding-top: 30px;
-  padding-bottom: 80px;
+  z-index: 2;
 
   @include --mobile {
     padding: 80px;
@@ -293,11 +379,12 @@
 
 /* how */
 .sec-how {
-  background: $--blue-light;
+  // background: $--blue-light;
   color: $--white;
   padding-top: 60px;
   padding-bottom: 80px;
   text-align: center;
+  z-index: 1;
 
   @include --mobile {
     padding: 80px;
@@ -381,12 +468,12 @@
 }
 
 /* contact */
-
 .sec-contact {
-  background: $--blue-light;
+  // background: $--blue-light;
   color: $--white;
   padding-bottom: 80px;
   text-align: center;
+  z-index: 0;
 
   &--title {
     font-size: 3em;

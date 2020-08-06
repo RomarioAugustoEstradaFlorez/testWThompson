@@ -17,4 +17,12 @@ export class MenuComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  scrollToTarget(id) {
+    // console.log(`scrolling to ${id}`);
+    let el = document.getElementById(id);
+    el.scrollIntoView();
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+
 }
