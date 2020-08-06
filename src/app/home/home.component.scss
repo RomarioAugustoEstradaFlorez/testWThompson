@@ -67,7 +67,7 @@
   position: relative;
 }
 
-// sec what is
+// sec what
 
 .sec-what {
   background: $--blue-light;
@@ -149,5 +149,132 @@
   @include --mobile {
     padding-top: 20px;
     padding-left: 0px;
+  }
+}
+
+/* why */
+
+.sec-why {
+  padding-top: 200px;
+  background: $--blue-light;
+  color: $--white;
+  padding-bottom: 100px;
+
+  &--img-desktop {
+    @include --mobile {
+      display: none;
+    }
+  }
+
+  &--img-mobile {
+    display: none;
+
+    @include --mobile {
+      display: block;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: -60px;
+    top: 120px;
+
+    @include --tablet {
+      top: 20px;
+      left: -40px;
+    }
+
+    @include --mobile {
+      position: inherit;
+      left: 0px;
+    }
+
+    &--title {
+      padding-top: 50px;
+      font-size: 3em;
+      margin-bottom: 30px;
+      text-align: right;
+
+      @include --tablet {
+        padding-top: 10px;
+        font-size: 2em;
+      }
+    }
+
+    &--desc {
+      font-size: 1em;
+      margin-bottom: 40px;
+      text-align: right
+    }
+
+    &--con {
+      @include --mobile {
+        margin-left: calc(27.33% + 5px);
+      }
+
+      @include --mobile-sm {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/*help*/
+.sec-help {
+  background: $--orange;
+  color: $--white;
+  padding-top: 30px;
+  padding-bottom: 80px;
+
+  @include --mobile {
+    padding: 80px;
+  }
+
+  &--title {
+    padding-top: 50px;
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include --mobile {
+      font-size: 2em;
+    }
+  }
+
+  &--label {
+    padding-top: 50px;
+    font-size: 1em;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__logo {
+    &.img-responsive {
+      @include --mobile {
+        margin: 0 auto;
+      }
+    }
+
+    &--title {
+      padding-top: 10px;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    &--label {
+      font-size: 1em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+}
+
+.sec-help__logo img {
+  margin: 0 auto;
+  width: 70%;
+
+  @include --mobile {
+    width: 100%;
   }
 }
